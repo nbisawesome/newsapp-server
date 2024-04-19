@@ -7,7 +7,7 @@ cors({ origin: '*' });
 
 app.use(cors());
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 const BASE_URL = 'https://newsapi.org/v2';
 const api = new BaseApiRequest(BASE_URL);
 
